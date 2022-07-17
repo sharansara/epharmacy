@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Medico Admin
+    </title>
+    <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+    <link rel="stylesheet" href="css/animate-css/animate.min.css">
+    <link rel="stylesheet" href="bootstrap-timepicker/css/bootstrap-timepicker.css">
+
+    <link rel="stylesheet" href="js/bootstrap-daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="css/select2/select2.min.css">
+
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ac.css">
+
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="modal-dialog modal-dialog-centered modal-undefined" role="document">
+        <div class="modal-content" style="border: none;">
+            <div>
+                <h4 class="h4 font-weight-400 float-left modal-title" id="exampleModalLabel">&nbsp;&nbsp;Create New
+                    debit note</h4>
+                <a href="credit-note.html" class="more-text widget-text float-right close-icon" data-dismiss="modal"
+                    aria-label="Close" style="text-decoration-line: none;margin-top: 10px;margin-right:10px;">Close</a>
+            </div>
+            <div class="modal-body">
+
+                <div class="card bg-none card-box">
+                    <form method="POST" action=" " accept-charset="UTF-8"><input name="_token" type="hidden" value=" ">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="input-group">
+                                    <label for="invoice" class="form-control-label">Invoice</label>
+                                    <select class="form-control select2" required="required" id="invoice"
+                                        name="invoice">
+                                        <option value="0">Select Invoice</option>
+                                        <option value="1">#INVO00001</option>
+                                        <option value="2">#INVO00002</option>
+                                        <option value="3">#INVO00003</option>
+                                        <option value="4">#INVO00004</option>
+                                        <option value="5">#INVO00005</option>
+                                        <option value="6">#INVO00006</option>
+                                        <option value="7">#INVO00007</option>
+                                        <option value="8">#INVO00008</option>
+                                        <option value="9">#INVO00009</option>
+                                        <option value="10">#INVO00010</option>
+                                        <option value="11">#INVO00011</option>
+                                        <option value="12">#INVO00012</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group  col-md-6">
+                                <label for="amount" class="form-control-label">Amount</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-money-bill-alt"></i></span>
+                                    <input class="form-control" required="required" step="0.01" name="amount"
+                                        type="number" id="amount">
+                                </div>
+                            </div>
+                            <div class="form-group  col-md-6">
+                                <label for="date" class="form-control-label">Date</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-money-bill-alt"></i></span>
+                                    <input class="form-control datepicker" name="date" type="text" value="" id="date">
+                                </div>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <label for="description" class="form-control-label">Description</label>
+                                <textarea class="form-control" rows="2" name="description" cols="50"
+                                    id="description"></textarea>
+                            </div>
+                            <div class="col-md-12">
+                                <input type="submit" value="Create" class="btn-create badge-blue">
+                                <input type="button" value="Cancel" class="btn-create bg-gray" data-dismiss="modal">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="assets/js/site.core.js"></script>
+
+        <script src="assets/libs/progressbar.js/dist/progressbar.min.js"></script>
+        <script src="assets/libs/moment/min/moment.min.js"></script>
+        <script src="assets/libs/bootstrap-notify/bootstrap-notify.min.js"></script>
+        <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+        <script src="assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+        <script src="assets/libs/nicescroll/jquery.nicescroll.min.js "></script>
+        <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+        <script>moment.locale('en');</script>
+
+        <script>
+            var dataTabelLang = {
+                paginate: { previous: "Previous", next: "Next" },
+                lengthMenu: "Show _MENU_ entries",
+                zeroRecords: "No data available in table",
+                info: "Showing _START_ to _END_ of _TOTAL_ entries",
+                infoEmpty: " ",
+                search: "Search:"
+            }
+        </script>
+
+        <script src="assets/js/site.js"></script>
+        <script src="assets/js/datatables.min.js"></script>
+
+        <script src="assets/js/jscolor.js "></script>
+        <script src="assets/js/custom.js "></script>
+        <script>
+            var date_picker_locale = {
+                format: 'YYYY-MM-DD',
+                daysOfWeek: [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat"
+                ],
+                monthNames: [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+            };
+            var calender_header = {
+                today: "today",
+                month: 'month',
+                week: 'week',
+                day: 'day',
+                list: 'list'
+            };
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medico Admin</title>
+    <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+    <link rel="stylesheet" href="css/animate-css/animate.min.css">
+    <link rel="stylesheet" href="bootstrap-timepicker/css/bootstrap-timepicker.css">
+
+    <link rel="stylesheet" href="js/bootstrap-daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="css/select2/select2.min.css">
+
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ac.css">
+
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+</head>
+
+<body class="application application-offset">
+    <div class="container-fluid container-application">
+        <div class="sidenav custom-sidenav" id="sidenav-main">
+            <!-- Sidenav header -->
+            <div class="sidenav-header d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/favicon.png" class="navbar-brand-img" />
+                    <h3 style="color:white"> Medico Admin</h3>
+                </a>
+                <div class="ml-auto">
+                    <div class="sidenav-toggler sidenav-toggler-dark d-md-none" data-action="sidenav-unpin"
+                        data-target="#sidenav-main">
+                        <div class="sidenav-toggler-inner">
+                            <i class="sidenav-toggler-line bg-white"></i>
+                            <i class="sidenav-toggler-line bg-white"></i>
+                            <i class="sidenav-toggler-line bg-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollbar-inner">
+                <div class="div-mega">
+                    <ul class="navbar-nav navbar-nav-docs">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link  active">
+                                <i class="fas fa-fire"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#navbar-staff" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-staff">
+                                <i class="fas fa-users"></i>Staff
+                                <i class="fas fa-sort-up"></i>
+                            </a>
+                            <div class="collapse " id="navbar-staff">
+                                <ul class="nav flex-column submenu-ul">
+                                    <li class="nav-item ">
+                                        <a href="users.html" class="nav-link">User</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="roles" class="nav-link">Role</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="productservice.html" class="nav-link ">
+                                <i class="fas fa-shopping-cart"></i>Product &amp; Service
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customer.html" class="nav-link ">
+                                <i class="fas fa-user-ninja"></i>Customer
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="vendor.html" class="nav-link ">
+                                <i class="fas fa-sticky-note"></i>Vendor
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="proposal.html" class="nav-link ">
+                                <i class="fas fa-receipt"></i>Proposal
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#navbar-banking" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-banking">
+                                <i class="fas fa-university"></i>Banking
+                                <i class="fas fa-sort-up"></i>
+                            </a>
+                            <div class="collapse " id="navbar-banking">
+                                <ul class="nav flex-column submenu-ul">
+                                    <li class="nav-item ">
+                                        <a href="bankaccount.html" class="nav-link">Account</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="transfer.html" class="nav-link">Transfer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#navbar-income" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-income">
+                                <i class="fas fa-money-bill-alt"></i>Income
+                                <i class="fas fa-sort-up"></i>
+                            </a>
+                            <div class="collapse " id="navbar-income">
+                                <ul class="nav flex-column submenu-ul">
+                                    <li class="nav-item ">
+                                        <a href="invoice.html" class="nav-link">Invoice</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="revenue.html" class="nav-link">Revenue</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="credit-note.html" class="nav-link">Credit Note</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#navbar-expense" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-expense">
+                                <i class="fas fa-money-bill-wave-alt"></i>Expense
+                                <i class="fas fa-sort-up"></i>
+                            </a>
+                            <div class="collapse " id="navbar-expense">
+                                <ul class="nav flex-column submenu-ul">
+                                    <li class="nav-item ">
+                                        <a href="bill.html" class="nav-link">Bill</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="payment.html" class="nav-link">Payment</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="debit-note.html" class="nav-link">Debit Note</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-content position-relative">
+            <nav class="navbar navbar-main navbar-expand-lg navbar-border n-top-header" id="navbar-main">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- User's navbar -->
+                    <div class="navbar-user d-lg-none ml-auto">
+                        <ul class="navbar-nav flex-row align-items-center">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin"
+                                    data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
+                            </li>
+                            <li class="nav-item dropdown dropdown-animate">
+                                <a class="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <span class="avatar avatar-sm rounded-circle">
+                                        <img src="storage/uploads/avatar/avatar.png" />
+                                    </span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
+                                    <h6 class="dropdown-header px-0">Hi, Kishore</h6>
+                                    <a href="profile" class="dropdown-item has-icon">
+                                        <i class="fa fa-user"></i> <span>My Profile</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="logout"
+                                        onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"
+                                        class="dropdown-item">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                    <form id="frm-logout" action="logout" method="POST" class="d-none">
+                                        <input type="hidden" name="_token"
+                                            value="uA6QhWr0L3b2D3fCaseymbBnKGM00EJPkhApwqdh">
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-nav ml-lg-auto align-items-lg-center" id="navbar-main-collapse">
+                        <ul class="navbar-nav align-items-center d-none d-lg-flex">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin"
+                                    data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
+                            </li>
+                            <div class="navbar-nav ml-lg-auto align-items-lg-center">
+                                <li class="nav-item dropdown dropdown-animate">
+                                    <a class="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <div class="media media-pill align-items-center">
+                                            <span class="avatar rounded-circle">
+                                                <img src="storage/uploads/avatar/avatar.png" />
+                                            </span>
+                                            <div class="ml-2 d-none d-lg-block">
+                                                <span class="mb-0 text-sm font-weight-bold">Kishore</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
+                                        <h6 class="dropdown-header px-0">Hi, Kishore</h6>
+                                        <a href="profile" class="dropdown-item has-icon">
+                                            <i class="fa fa-user"></i> <span>My Profile</span>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="logout" class="dropdown-item"
+                                            onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            <span>Logout</span>
+
+                                            <form id="frm-logout" action="logout" method="POST" class="d-none">
+                                                <input type="hidden" name="_token"
+                                                    value="7mkgWjWp4NnN94SiXtlWNB1YDToLJjaEVd6xwZua">
+                                            </form>
+                                        </a>
+                                    </div>
+                                </li>
+
+                            </div>
+                    </div>
+            </nav>
+            <div class="page-content">
+                <div class="page-title">
+                    <div class="row justify-content-between align-items-center">
+                        <div
+                            class="col-xl-4 col-lg-4 col-md-4 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+                            <div class="d-inline-block">
+                                <h5 class="h4 d-inline-block font-weight-400 mb-0 "> Manage Invoices
+                                </h5>
+                            </div>
+                        </div>
+                        <div
+                            class="col-xl-8 col-lg-8 col-md-8 d-flex align-items-center justify-content-between justify-content-md-end">
+                            <div class="row d-flex justify-content-end">
+                                <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6 col-12">
+                                    <div class="all-button-box">
+                                        <a href="invoiceadd.html" data-url="" data-ajax-popup="true"
+                                            data-title="Create New Transfer Amount"
+                                            class="btn btn-xs btn-white btn-icon-only width-auto">
+
+                                            <i class="fas fa-plus"></i> Create
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body py-0 mt-2">
+                                <form method="GET" action="invoice" accept-charset="UTF-8" id="customer_submit">
+                                    <div class="row d-flex justify-content-end">
+                                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+                                            <div class="all-select-box">
+                                                <div class="btn-box">
+                                                    <label for="issue_date" class="text-type">Date</label>
+                                                    <input class="form-control month-btn datepicker-range"
+                                                        name="issue_date" type="text" id="issue_date">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12">
+                                            <div class="all-select-box">
+                                                <div class="btn-box">
+                                                    <label for="customer" class="text-type">Customer</label>
+                                                    <select class="form-control select2" id="customer" name="customer">
+                                                        <option value="" selected="selected">All</option>
+                                                        <option value="1">Keir</option>
+                                                        <option value="2">Protiong</option>
+                                                        <option value="3">Ida F. Mullen</option>
+                                                        <option value="4">Teresa R McRae</option>
+                                                        <option value="5">Joel O Dolan</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12">
+                                            <div class="all-select-box">
+                                                <div class="btn-box">
+                                                    <label for="status" class="text-type">Status</label>
+                                                    <select class="form-control select2" id="status" name="status">
+                                                        <option value="" selected="selected">All</option>
+                                                        <option value="0">Draft</option>
+                                                        <option value="1">Sent</option>
+                                                        <option value="2">Unpaid</option>
+                                                        <option value="3">Partialy Paid</option>
+                                                        <option value="4">Paid</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto my-auto">
+                                            <a href="#" class="apply-btn"
+                                                onclick="document.getElementById('customer_submit').submit(); return false;"
+                                                data-toggle="tooltip" data-original-title="apply">
+                                                <span class="btn-inner--icon"><i class="fas fa-search"></i></span>
+                                            </a>
+                                            <a href="invoice" class="reset-btn" data-toggle="tooltip"
+                                                data-original-title="Reset">
+                                                <span class="btn-inner--icon"><i
+                                                        class="fas fa-trash-restore-alt"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0 dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th> Invoice</th>
+                                                <th>Customer</th>
+                                                <th>Issue Date</th>
+                                                <th>Due Date</th>
+                                                <th>Due Amount</th>
+                                                <th>Status</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/1">#INVO00001</a>
+                                                </td>
+                                                <td> Keir </td>
+                                                <td>Jul 8, 2020</td>
+                                                <td>
+                                                    <p class="text-danger"> Jul 31, 2020</p>
+                                                </td>
+                                                <td>$1,065.50</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-success">Paid</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-1').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/1/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-1">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/1" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/1/edit" class="edit-icon" data-toggle="tooltip"
+                                                            data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-1').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/1" accept-charset="UTF-8"
+                                                            id="delete-form-1"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/2">#INVO00002</a>
+                                                </td>
+                                                <td> Protiong </td>
+                                                <td>Jul 9, 2020</td>
+                                                <td>
+                                                    <p class="text-danger"> Jul 30, 2020</p>
+                                                </td>
+                                                <td>$2,664.50</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-info">Partialy Paid</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-2').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/2/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-2">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/2" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/2/edit" class="edit-icon" data-toggle="tooltip"
+                                                            data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-2').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/2" accept-charset="UTF-8"
+                                                            id="delete-form-2"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/3">#INVO00003</a>
+                                                </td>
+                                                <td> Ida F. Mullen </td>
+                                                <td>Jul 8, 2020</td>
+                                                <td>
+                                                    <p class="text-danger"> Aug 12, 2020</p>
+                                                </td>
+                                                <td>$1,014.50</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-info">Partialy Paid</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-3').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/3/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-3">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/3" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/3/edit" class="edit-icon" data-toggle="tooltip"
+                                                            data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-3').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/3" accept-charset="UTF-8"
+                                                            id="delete-form-3"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/4">#INVO00004</a>
+                                                </td>
+                                                <td> Keir </td>
+                                                <td>Jul 8, 2020</td>
+                                                <td>
+                                                    <p class="text-danger"> Aug 26, 2020</p>
+                                                </td>
+                                                <td>$753.00</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-info">Partialy Paid</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-4').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/4/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-4">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/4" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/4/edit" class="edit-icon" data-toggle="tooltip"
+                                                            data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-4').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/4" accept-charset="UTF-8"
+                                                            id="delete-form-4"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/5">#INVO00005</a>
+                                                </td>
+                                                <td> Keir </td>
+                                                <td>Jul 9, 2020</td>
+                                                <td>
+                                                    <p class="text-danger"> Aug 26, 2020</p>
+                                                </td>
+                                                <td>$0.00</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-success">Paid</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-5').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/5/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-5">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/5" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/5/edit" class="edit-icon" data-toggle="tooltip"
+                                                            data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-5').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/5" accept-charset="UTF-8"
+                                                            id="delete-form-5"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/6">#INVO00006</a>
+                                                </td>
+                                                <td> Keir </td>
+                                                <td>Jul 13, 2020</td>
+                                                <td>
+                                                    <p class="text-danger"> Jul 14, 2020</p>
+                                                </td>
+                                                <td>$849.00</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-success">Paid</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-6').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/6/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-6">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/6" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/6/edit" class="edit-icon" data-toggle="tooltip"
+                                                            data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-6').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/6" accept-charset="UTF-8"
+                                                            id="delete-form-6"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/7">#INVO00007</a>
+                                                </td>
+                                                <td> Protiong </td>
+                                                <td>Jul 13, 2020</td>
+                                                <td>
+                                                    <p class="text-danger"> Jul 13, 2020</p>
+                                                </td>
+                                                <td>$66.50</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-success">Paid</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-7').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/7/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-7">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/7" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/7/edit" class="edit-icon" data-toggle="tooltip"
+                                                            data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-7').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/7" accept-charset="UTF-8"
+                                                            id="delete-form-7"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/8">#INVO00008</a>
+                                                </td>
+                                                <td> Keir </td>
+                                                <td>Jul 13, 2020</td>
+                                                <td>
+                                                    <p class="text-danger"> Jul 13, 2020</p>
+                                                </td>
+                                                <td>$0.00</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-primary">Draft</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-8').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/8/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-8">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/8" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/8/edit" class="edit-icon" data-toggle="tooltip"
+                                                            data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-8').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/8" accept-charset="UTF-8"
+                                                            id="delete-form-8"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/9">#INVO00009</a>
+                                                </td>
+                                                <td> Protiong </td>
+                                                <td>Jul 17, 2020</td>
+                                                <td>
+                                                    <p class="text-danger"> Jul 17, 2020</p>
+                                                </td>
+                                                <td>$532.80</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-primary">Draft</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-9').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/9/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-9">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/9" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/9/edit" class="edit-icon" data-toggle="tooltip"
+                                                            data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-9').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/9" accept-charset="UTF-8"
+                                                            id="delete-form-9"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="Id">
+                                                    <a href="invoice/10">#INVO00010</a>
+                                                </td>
+                                                <td> Protiong </td>
+                                                <td>Feb 23, 2021</td>
+                                                <td>
+                                                    <p class="text-danger"> Feb 23, 2021</p>
+                                                </td>
+                                                <td>$532.90</td>
+                                                <td>
+                                                    <span class="badge badge-pill badge-primary">Draft</span>
+                                                </td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="Duplicate" data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="You want to confirm this action. Press Yes to continue or Cancel to go back"
+                                                            data-confirm-yes="document.getElementById('duplicate-form-10').submit();">
+                                                            <i class="fas fa-copy"></i>
+                                                            <form method="GET" action="invoice/10/duplicate"
+                                                                accept-charset="UTF-8" id="duplicate-form-10">
+                                                            </form>
+                                                        </a>
+                                                        <a href="invoice/10" class="edit-icon bg-info"
+                                                            data-toggle="tooltip" data-original-title="Detail">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="invoice/10/edit" class="edit-icon"
+                                                            data-toggle="tooltip" data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-10').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="invoice/10" accept-charset="UTF-8"
+                                                            id="delete-form-10"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="SjCbuprmPfsq0DvrRSRf6F5gRcoy55e5JwjJvcZm">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div>
+                    <h4 class="h4 font-weight-400 float-left modal-title" id="exampleModalLabel"></h4>
+                    <a href="#" class="more-text widget-text float-right close-icon" data-dismiss="modal"
+                        aria-label="Close">Close</a>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/site.core.js"></script>
+
+    <script src="assets/libs/progressbar.js/dist/progressbar.min.js"></script>
+    <script src="assets/libs/moment/min/moment.min.js"></script>
+    <script src="assets/libs/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script src="assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="assets/libs/nicescroll/jquery.nicescroll.min.js "></script>
+    <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script>moment.locale('en');</script>
+
+    <script>
+        var dataTabelLang = {
+            paginate: { previous: "Previous", next: "Next" },
+            lengthMenu: "Show _MENU_ entries",
+            zeroRecords: "No data available in table",
+            info: "Showing _START_ to _END_ of _TOTAL_ entries",
+            infoEmpty: " ",
+            search: "Search:"
+        }
+    </script>
+
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/datatables.min.js"></script>
+
+    <script src="assets/js/jscolor.js "></script>
+    <script src="assets/js/custom.js "></script>
+    <script>
+        var date_picker_locale = {
+            format: 'YYYY-MM-DD',
+            daysOfWeek: [
+                "Sun",
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat"
+            ],
+            monthNames: [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ],
+        };
+        var calender_header = {
+            today: "today",
+            month: 'month',
+            week: 'week',
+            day: 'day',
+            list: 'list'
+        };
+    </script>
+
+</body>
+
+</html>

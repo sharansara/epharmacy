@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="csrf-token" id="csrf-token" content="fojiaoVZJbm6KNUmhNaFMz6THM8vHapJdF0RUpWX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>Medico
+    </title>
+
+    <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+    <link rel="stylesheet" href="css/animate-css/animate.min.css">
+    <link rel="stylesheet" href="bootstrap-timepicker/css/bootstrap-timepicker.css">
+
+    <link rel="stylesheet" href="js/bootstrap-daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="css/select2/select2.min.css">
+
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ac.css">
+
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+</head>
+
+<body class="application application-offset">
+    <div class="container-fluid container-application">
+        <div class="sidenav custom-sidenav" id="sidenav-main">
+            <!-- Sidenav header -->
+            <div class="sidenav-header d-flex align-items-center">
+                <a class="navbar-brand" href="superadmindashboard.html">
+                    <img src="images/favicon.png" class="navbar-brand-img" />
+                    <h3 style="color: white;">Medico</h3>
+                </a>
+                <div class="ml-auto">
+                    <div class="sidenav-toggler sidenav-toggler-dark d-md-none" data-action="sidenav-unpin"
+                        data-target="#sidenav-main">
+                        <div class="sidenav-toggler-inner">
+                            <i class="sidenav-toggler-line bg-white"></i>
+                            <i class="sidenav-toggler-line bg-white"></i>
+                            <i class="sidenav-toggler-line bg-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scrollbar-inner">
+                <div class="div-mega">
+                    <ul class="navbar-nav navbar-nav-docs">
+                        <li class="nav-item">
+                            <a href="superadmindashboard.html" class="nav-link  active">
+                                <i class="fas fa-fire"></i>Dashboard
+                            </a>
+                        </li>
+
+                        <li class="nav-item ">
+                            <a href="user.html" class="nav-link">
+                                <i class="fas fa-user-ninja"></i>User</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="plan.html" class="nav-link">
+                                <i class="fas fa-user-ninja"></i>Plan</a>
+                        </li>
+
+
+                        </li>
+                        <li class="nav-item">
+                            <a href="managecoupon.html" class="nav-link ">
+                                <i class="fas fa-shopping-cart"></i>coupon
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="order.html" class="nav-link ">
+                                <i class="fas fa-user-ninja"></i>order
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="systemsetting.html" class="nav-link ">
+                                <i class="fas fa-sticky-note"></i>system setting
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-content position-relative">
+            <nav class="navbar navbar-main navbar-expand-lg navbar-border n-top-header" id="navbar-main">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- User's navbar -->
+                    <div class="navbar-user d-lg-none ml-auto">
+                        <ul class="navbar-nav flex-row align-items-center">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin"
+                                    data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
+                            </li>
+                            <li class="nav-item dropdown dropdown-animate">
+                                <a class="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <span class="avatar avatar-sm rounded-circle">
+                                        <img src="images/avatar-1.svg" />
+                                    </span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
+                                    <h6 class="dropdown-header px-0">Super Admin</h6>
+                                    <a href="profile.html" class="dropdown-item has-icon">
+                                        <i class="fas fa-user"></i> <span>My Profile</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="logout.html"
+                                        onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"
+                                        class="dropdown-item">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                    <form id="frm-logout" action="#" method="POST" class="d-none">
+                                        <input type="hidden" name="_token"
+                                            value="fojiaoVZJbm6KNUmhNaFMz6THM8vHapJdF0RUpWX">
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-collapse-fade" id="navbar-main-collapse">
+                        <ul class="navbar-nav align-items-center d-none d-lg-flex">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin"
+                                    data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
+                            </li>
+                            <li class="nav-item dropdown dropdown-animate">
+                                <a class="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <div class="media media-pill align-items-center">
+                                        <span class="avatar rounded-circle">
+                                            <img src="images/avatar-1.svg" />
+                                        </span>
+                                        <div class="ml-2 d-none d-lg-block">
+                                            <span class="mb-0 text-sm font-weight-bold">Super Admin</span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
+                                    <h6 class="dropdown-header px-0">hai,Super Admin</h6>
+                                    <a href="profile.html" class="dropdown-item has-icon">
+                                        <i class="fas fa-user"></i> <span>My Profile</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="logout.html" class="dropdown-item"
+                                        onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <span>Logout</span>
+                                        <form id="frm-logout" action="#" method="POST" class="d-none">
+                                            <input type="hidden" name="_token"
+                                                value="fojiaoVZJbm6KNUmhNaFMz6THM8vHapJdF0RUpWX">
+                                        </form>
+                                    </a>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <ul class="navbar-nav ml-lg-auto align-items-lg-center">
+                            <li class="nav-item">
+                                <div class="dropdown global-icon" data-toggle="tooltip"
+                                    data-original-titla="Choose Language">
+                                    <button class="dropdown-toggle" type="button" id="dropdownMenuButton"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-globe"></i>
+                                    </button>
+                                    <div class="dropdown-menu  dropdown-menu-right"
+                                        aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" href="#">Create &amp; Customize</a>
+                                        <a class="dropdown-item" href="#">AR</a>
+                                        <a class="dropdown-item" href="#">DA</a>
+                                        <a class="dropdown-item" href="#">DE</a>
+
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+
+
+            <div class="page-content">
+                <div class="page-title">
+                    <div class="row justify-content-between align-items-center">
+                        <div
+                            class="col-xl-4 col-lg-4 col-md-4 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+                            <div class="d-inline-block">
+                                <h5 class="h4 d-inline-block font-weight-400 mb-0 "> Manage coupon
+                                </h5>
+                            </div>
+                        </div>
+                        <div
+                            class="col-xl-8 col-lg-8 col-md-8 d-flex align-items-center justify-content-between justify-content-md-end">
+                            <div class="all-button-box row d-flex justify-content-end">
+                                <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
+                                    <a href="addcoupon.html" data-size="2xl"
+                                        data-url="C:\Users\sara\medico\addcoupon.html" data-ajax-popup="true"
+                                        data-title="Create New coupon"
+                                        class="btn btn-xs btn-white btn-icon-only width-auto commonModal">
+                                        <i class="fas fa-plus"></i> Create
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-body py-0">
+                                <div class="table-responsive">
+                                    <table class="table table-striped mb-0 dataTable">
+                                        <thead>
+                                            <tr>
+
+                                                <th> Name</th>
+                                                <th> Code</th>
+                                                <th> Discount(%)</th>
+                                                <th> Limit</th>
+                                                <th>Used</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr class="cust_tr" id="cust_detail" data-url="#" data-id="1">
+
+                                                <td class="font-style">50% discount</td>
+                                                <td>50PDC</td>
+                                                <td>50</td>
+                                                <td>10</td>
+                                                <td>3</td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="View">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="#" class="edit-icon" data-size="2xl" data-url="#"
+                                                            data-ajax-popup="true" data-title="Edit coupon"
+                                                            data-toggle="tooltip" data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-1').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="#" accept-charset="UTF-8"
+                                                            id="delete-form-1"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="FVb8C5KddV4e1Xor6WOmZe400gQv2UvIhKLSMEqQ">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr class="cust_tr" id="cust_detail" data-url="#" data-id="2">
+
+                                                <td class="font-style">Free coupon</td>
+                                                <td>ABBBJSDFF</td>
+                                                <td>100</td>
+                                                <td>10</td>
+                                                <td>0</td>
+                                                <td class="Action">
+                                                    <span>
+                                                        <a href="#" class="edit-icon bg-success" data-toggle="tooltip"
+                                                            data-original-title="View">
+                                                            <i class="fas fa-eye"></i>
+                                                        </a>
+                                                        <a href="#" class="edit-icon" data-size="2xl" data-url="#"
+                                                            data-ajax-popup="true" data-title="Edit Coupon"
+                                                            data-toggle="tooltip" data-original-title="Edit">
+                                                            <i class="fas fa-pencil-alt"></i>
+                                                        </a>
+                                                        <a href="#" class="delete-icon " data-toggle="tooltip"
+                                                            data-original-title="Delete"
+                                                            data-confirm="Are You Sure?|This action can not be undone. Do you want to continue?"
+                                                            data-confirm-yes="document.getElementById('delete-form-2').submit();">
+                                                            <i class="fas fa-trash"></i>
+                                                        </a>
+                                                        <form method="POST" action="#" accept-charset="UTF-8"
+                                                            id="delete-form-2"><input name="_method" type="hidden"
+                                                                value="DELETE"><input name="_token" type="hidden"
+                                                                value="FVb8C5KddV4e1Xor6WOmZe400gQv2UvIhKLSMEqQ">
+                                                        </form>
+                                                    </span>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div>
+                    <h4 class="h4 font-weight-400 float-left modal-title" id="exampleModalLabel"></h4>
+                    <a href="#" class="more-text widget-text float-right close-icon" data-dismiss="modal"
+                        aria-label="Close">Close</a>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/site.core.js"></script>
+
+    <script src="js/progressbar.js/dist/progressbar.min.js"></script>
+    <script src="js/moment/moment.min.js"></script>
+    <script src="js/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="js/date-picker/jquery.timepicker.js"></script>
+    <script src="js/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="js/select2/select2.min.js"></script>
+    <script src="js/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="js/apexcharts/dist/apexcharts.min.js"></script>
+    <script>moment.locale('en');</script>
+
+    <script>
+        var dataTabelLang = {
+            paginate: { previous: "Previous", next: "Next" },
+            lengthMenu: "Show _MENU_ entries",
+            zeroRecords: "No data available in table",
+            info: "Showing _START_ to _END_ of _TOTAL_ entries",
+            infoEmpty: " ",
+            search: "Search:"
+        }
+    </script>
+
+    <script src="js/site.js"></script>
+    <script src="js/datatables.min.js"></script>
+
+    <script src="js/jscolor.js"></script>
+    <script src="js/custom.js"></script>
+
+    </script>
+
+
+    <script>
+        var options = {
+            series: [
+                {
+                    name: "Profit",
+                    data: [5000, 4000, 5000, 4000, 6000, 8000, 10000, 6000, 11000, 12000, 9000, 8000, 9000, 14000, 10000]
+                },
+
+            ],
+            chart: {
+                height: 350,
+                type: 'line',
+                dropShadow: {
+                    enabled: true,
+                    color: '#000',
+                    top: 18,
+                    left: 7,
+                    blur: 10,
+                    opacity: 0.2
+                },
+                toolbar: {
+                    show: false
+                }
+            },
+            colors: ['#77B6EA', '#545454'],
+            dataLabels: {
+                enabled: true,
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            title: {
+                text: '',
+                align: 'left'
+            },
+            grid: {
+                borderColor: '#e7e7e7',
+                row: {
+                    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                    opacity: 0.5
+                },
+            },
+            markers: {
+                size: 1
+            },
+            xaxis: {
+                categories: ["14-May", "13-May", "12-May", "11-May", "10-May", "09-May", "08-May", "07-May", "06-May", "05-May", "04-May", "03-May", "02-May", "01-May", "30-Apr"],
+                title: {
+                    text: 'Days'
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'Amount'
+                },
+
+            },
+            legend: {
+                position: 'top',
+                horizontalAlign: 'right',
+                floating: true,
+                offsetY: -25,
+                offsetX: -5
+            }
+        };
+        var chart = new ApexCharts(document.querySelector("#cash-flow"), options);
+        chart.render();
+
+
+        var SalesChart = {
+            series: [
+                {
+                    name: "Income",
+                    data: [9000, 34230, 21100, 12530, 33360, 28000, 30000, 15000, 17000, 8000, 23000, 29000]
+                },
+                {
+                    name: "Expense",
+                    data: [6000, 30230, 19100, 10530, 30360, 22000, 25000, 12000, 12000, 5000, 17000, 23000]
+                }
+            ],
+            colors: ['#77B6EA', '#545454'],
+            chart: {
+                type: 'bar',
+                height: 430
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    dataLabels: {
+                        position: 'top',
+                    },
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                offsetX: -6,
+                style: {
+                    fontSize: '12px',
+                    colors: ['#fff']
+                }
+            },
+            stroke: {
+                show: true,
+                width: 1,
+                colors: ['#fff']
+            },
+            xaxis: {
+                categories: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            },
+        };
+        var sales = new ApexCharts(document.querySelector("#incExpBarChart"), SalesChart);
+        sales.render();
+
+
+        var incomeCategories = {
+            // series: [10,20],
+            series: [10, 20],
+
+            chart: {
+                width: '500px',
+                type: 'pie',
+            },
+            colors: ["#00B8D9", "#36B37E"],
+            labels: ["Maintenance Sales", "Product Sales"],
+
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        offset: -5
+                    }
+                }
+            },
+            title: {
+                text: ""
+            },
+            dataLabels: {},
+            legend: {
+                display: false
+            },
+
+        };
+        var incomeCategory = new ApexCharts(document.querySelector("#incomeByCategory"), incomeCategories);
+        incomeCategory.render();
+
+
+        var expenseCategories = {
+            series: [10, 20],
+
+            chart: {
+                width: '500px',
+                height: '500px',
+                type: 'pie',
+            },
+            colors: ['#77B6EA', '#545454'],
+            labels: ["Rent Or Lease", "Travel"],
+
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        offset: -5
+                    }
+                }
+            },
+            title: {
+                text: ""
+            },
+            dataLabels: {},
+            legend: {
+                show: true
+            }
+        };
+        var expenseCategory = new ApexCharts(document.querySelector("#expenseByCategory"), expenseCategories);
+        expenseCategory.render();
+
+    </script>
+    <script>
+        var date_picker_locale = {
+            format: 'YYYY-MM-DD',
+            daysOfWeek: [
+                "Sun",
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat"
+            ],
+            monthNames: [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ],
+        };
+        var calender_header = {
+            today: "today",
+            month: 'month',
+            week: 'week',
+            day: 'day',
+            list: 'list'
+        };
+    </script>
+    <script>
+        $(document).on('click', '#billing_data', function () {
+            $("[name='shipping_name']").val($("[name='billing_name']").val());
+            $("[name='shipping_country']").val($("[name='billing_country']").val());
+            $("[name='shipping_state']").val($("[name='billing_state']").val());
+            $("[name='shipping_city']").val($("[name='billing_city']").val());
+            $("[name='shipping_phone']").val($("[name='billing_phone']").val());
+            $("[name='shipping_zip']").val($("[name='billing_zip']").val());
+            $("[name='shipping_address']").val($("[name='billing_address']").val());
+        })
+
+    </script>
+</body>
+
+</html>

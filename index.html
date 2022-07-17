@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Medico Admin Dashboard</title>
+    <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+    <link rel="stylesheet" href="css/animate-css/animate.min.css">
+    <link rel="stylesheet" href="bootstrap-timepicker/css/bootstrap-timepicker.css">
+
+    <link rel="stylesheet" href="js/bootstrap-daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="css/select2/select2.min.css">
+
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ac.css">
+
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+</head>
+
+<body class="application application-offset">
+    <div class="container-fluid container-application">
+        <div class="sidenav custom-sidenav" id="sidenav-main">
+            <!-- Sidenav header -->
+            <div class="sidenav-header d-flex align-items-center">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/favicon.png" class="navbar-brand-img" />
+                    <h3 style="color:white"> Medico Admin</h3>
+                </a>
+                <div class="ml-auto">
+                    <div class="sidenav-toggler sidenav-toggler-dark d-md-none" data-action="sidenav-unpin"
+                        data-target="#sidenav-main">
+                        <div class="sidenav-toggler-inner">
+                            <i class="sidenav-toggler-line bg-white"></i>
+                            <i class="sidenav-toggler-line bg-white"></i>
+                            <i class="sidenav-toggler-line bg-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scrollbar-inner">
+                <div class="div-mega">
+                    <ul class="navbar-nav navbar-nav-docs">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link  active">
+                                <i class="fas fa-fire"></i>Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#navbar-staff" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-staff">
+                                <i class="fas fa-users"></i>Staff
+                                <i class="fas fa-sort-up"></i>
+                            </a>
+                            <div class="collapse " id="navbar-staff">
+                                <ul class="nav flex-column submenu-ul">
+                                    <li class="nav-item ">
+                                        <a href="users.html" class="nav-link">User</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="roles" class="nav-link">Role</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="productservice.html" class="nav-link ">
+                                <i class="fas fa-shopping-cart"></i>Product &amp; Service
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="customer.html" class="nav-link ">
+                                <i class="fas fa-user-ninja"></i>Customer
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="vendor.html" class="nav-link ">
+                                <i class="fas fa-sticky-note"></i>Vendor
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="proposal.html" class="nav-link ">
+                                <i class="fas fa-receipt"></i>Proposal
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#navbar-banking" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-banking">
+                                <i class="fas fa-university"></i>Banking
+                                <i class="fas fa-sort-up"></i>
+                            </a>
+                            <div class="collapse " id="navbar-banking">
+                                <ul class="nav flex-column submenu-ul">
+                                    <li class="nav-item ">
+                                        <a href="bankaccount.html" class="nav-link">Account</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="transfer.html" class="nav-link">Transfer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#navbar-income" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-income">
+                                <i class="fas fa-money-bill-alt"></i>Income
+                                <i class="fas fa-sort-up"></i>
+                            </a>
+                            <div class="collapse " id="navbar-income">
+                                <ul class="nav flex-column submenu-ul">
+                                    <li class="nav-item ">
+                                        <a href="invoice.html" class="nav-link">Invoice</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="revenue.html" class="nav-link">Revenue</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="credit-note.html" class="nav-link">Credit Note</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link collapsed" href="#navbar-expense" data-toggle="collapse" role="button"
+                                aria-expanded="false" aria-controls="navbar-expense">
+                                <i class="fas fa-money-bill-wave-alt"></i>Expense
+                                <i class="fas fa-sort-up"></i>
+                            </a>
+                            <div class="collapse " id="navbar-expense">
+                                <ul class="nav flex-column submenu-ul">
+                                    <li class="nav-item ">
+                                        <a href="bill.html" class="nav-link">Bill</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="payment.html" class="nav-link">Payment</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a href="debit-note.html" class="nav-link">Debit Note</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main-content position-relative">
+            <nav class="navbar navbar-main navbar-expand-lg navbar-border n-top-header" id="navbar-main">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbar-main-collapse" aria-controls="navbar-main-collapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!-- User's navbar -->
+                    <div class="navbar-user d-lg-none ml-auto">
+                        <ul class="navbar-nav flex-row align-items-center">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin"
+                                    data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
+                            </li>
+                            <li class="nav-item dropdown dropdown-animate">
+                                <a class="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <span class="avatar avatar-sm rounded-circle">
+                                        <img src="storage/uploads/avatar/avatar.png" />
+                                    </span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
+                                    <h6 class="dropdown-header px-0">Hi, Kishore</h6>
+                                    <a href="profile" class="dropdown-item has-icon">
+                                        <i class="fa fa-user"></i> <span>My Profile</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a href="logout"
+                                        onclick="event.preventDefault(); document.getElementById('frm-logout').submit();"
+                                        class="dropdown-item">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                    <form id="frm-logout" action="logout" method="POST" class="d-none">
+                                        <input type="hidden" name="_token"
+                                            value="uA6QhWr0L3b2D3fCaseymbBnKGM00EJPkhApwqdh">
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-nav ml-lg-auto align-items-lg-center" id="navbar-main-collapse">
+                        <ul class="navbar-nav align-items-center d-none d-lg-flex">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link nav-link-icon sidenav-toggler" data-action="sidenav-pin"
+                                    data-target="#sidenav-main"><i class="fas fa-bars"></i></a>
+                            </li>
+                            <div class="navbar-nav ml-lg-auto align-items-lg-center">
+                                <li class="nav-item dropdown dropdown-animate">
+                                    <a class="nav-link pr-lg-0" href="#" role="button" data-toggle="dropdown"
+                                        aria-haspopup="true" aria-expanded="false">
+                                        <div class="media media-pill align-items-center">
+                                            <span class="avatar rounded-circle">
+                                                <img src="storage/uploads/avatar/avatar.png" />
+                                            </span>
+                                            <div class="ml-2 d-none d-lg-block">
+                                                <span class="mb-0 text-sm font-weight-bold">Kishore</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-sm dropdown-menu-right dropdown-menu-arrow">
+                                        <h6 class="dropdown-header px-0">Hi, Kishore</h6>
+                                        <a href="profile" class="dropdown-item has-icon">
+                                            <i class="fa fa-user"></i> <span>My Profile</span>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a href="logout" class="dropdown-item"
+                                            onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            <span>Logout</span>
+                                            <form id="frm-logout" action="logout" method="POST" class="d-none">
+                                                <input type="hidden" name="_token"
+                                                    value="uA6QhWr0L3b2D3fCaseymbBnKGM00EJPkhApwqdh">
+                                            </form>
+                                        </a>
+                                    </div>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div class="page-content">
+                <div class="page-title">
+                    <div class="row justify-content-between align-items-center">
+                        <div
+                            class="col-xl-4 col-lg-4 col-md-4 d-flex align-items-center justify-content-between justify-content-md-start mb-3 mb-md-0">
+                            <div class="d-inline-block">
+                                <h5 class="h4 d-inline-block font-weight-400 mb-0 "> Dashboard
+                                </h5>
+                            </div>
+                        </div>
+                        <div
+                            class="col-xl-8 col-lg-8 col-md-8 d-flex align-items-center justify-content-between justify-content-md-end">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                </div>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-box">
+                            <div class="left-card">
+                                <div class="icon-box bg-success"><i class="fas fa-users"></i></div>
+                                <h4>Total Customers</h4>
+                            </div>
+                            <div class="number-icon">5</div>
+                        </div>
+                        <img src="assets/img/dot-icon.png" alt="" class="dotted-icon">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-box">
+                            <div class="left-card">
+                                <div class="icon-box bg-warning"><i class="fas fa-user"></i></div>
+                                <h4>Total Vendors</h4>
+                            </div>
+                            <div class="number-icon">5</div>
+                        </div>
+                        <img src="assets/img/dot-icon.png" alt="" class="dotted-icon">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-box">
+                            <div class="left-card">
+                                <div class="icon-box bg-primary"><i class="fas fa-money-bill"></i></div>
+                                <h4>Total Invoices</h4>
+                            </div>
+                            <div class="number-icon">12</div>
+                        </div>
+                        <img src="assets/img/dot-icon.png" alt="" class="dotted-icon">
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                        <div class="card card-box">
+                            <div class="left-card">
+                                <div class="icon-box bg-dagner"><i class="fas fa-database"></i></div>
+                                <h4>Total Bills</h4>
+                            </div>
+                            <div class="number-icon">6</div>
+                        </div>
+                        <img src="assets/img/dot-icon.png" alt="" class="dotted-icon">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <h4 class="h4 font-weight-400 float-left">Cashflow</h4>
+                            <h6 class="last-day-text">Last <span>15 days</span></h6>
+                        </div>
+                        <div class="card bg-none">
+                            <div class="scrollbar-inner">
+                                <div id="cash-flow" class="chartjs-render-monitor" height="210"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <h4 class="h4 font-weight-400">Income Vs Expense</h4>
+                        <div class="card bg-none dashboard-box-1">
+                            <div class="table-responsive">
+                                <table class="table align-items-center mb-0">
+                                    <tbody class="list">
+                                        <tr>
+                                            <td>
+                                                <h4 class="mb-0">Income</h4>
+                                                <h5 class="mb-0">Today</h5>
+                                            </td>
+                                            <td>
+                                                <h3 class="green-text">$732.60</h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h4 class="mb-0">Expense</h4>
+                                                <h5 class="mb-0">Today</h5>
+                                            </td>
+                                            <td>
+                                                <h3 class="red-text">$0.00</h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h4 class="mb-0">Income This</h4>
+                                                <h5 class="mb-0">Month</h5>
+                                            </td>
+                                            <td>
+                                                <h3 class="green-text">$732.60</h3>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <h4 class="mb-0">Expense This</h4>
+                                                <h5 class="mb-0">Month</h5>
+                                            </td>
+                                            <td>
+                                                <h3 class="red-text">$0.00</h3>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-8 col-lg-8 col-md-8">
+                        <div class="">
+                            <h4 class="h4 font-weight-400 float-left">Account Balance</h4>
+                        </div>
+                        <div class="card bg-none dashboard-box-1">
+                            <div class="table-responsive">
+                                <table class="table table-striped mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Bank</th>
+                                            <th>Holder Name</th>
+                                            <th>Balance</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="font-style">
+                                            <td>-</td>
+                                            <td>Cash</td>
+                                            <td>$7,461.40</td>
+                                        </tr>
+                                        <tr class="font-style">
+                                            <td>ROUNDBANK</td>
+                                            <td>Benjamin Adams</td>
+                                            <td>$99,860.00</td>
+                                        </tr>
+                                        <tr class="font-style">
+                                            <td>COBIZ BANK</td>
+                                            <td>Chisom Latifat</td>
+                                            <td>$84,273.00</td>
+                                        </tr>
+                                        <tr class="font-style">
+                                            <td>US BANK, NA</td>
+                                            <td>Earl Hane MD</td>
+                                            <td>$84,193.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div>
+                            <h4 class="h4 font-weight-400 float-left">Income &amp; Expense</h4>
+                            <h6 class="last-day-text">Current Year - 2021</h6>
+                        </div>
+                        <div class="card bg-none">
+                            <div class="scrollbar-inner">
+                                <div id="incExpBarChart" height="250"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-12 col-sm-12">
+                        <div>
+                            <h4 class="h4 font-weight-400 float-left">Income By Category</h4>
+                            <h6 class="last-day-text">Current Year - 2021</h6>
+                        </div>
+                        <div class="card bg-none">
+                            <div class="card-body align-self-center height-440">
+                                <div id="incomeByCategory"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12 col-12 col-sm-12">
+                        <div>
+                            <h4 class="h4 font-weight-400 float-left">Expense By Category</h4>
+                            <h6 class="last-day-text">Current Year - 2021</h6>
+                        </div>
+                        <div class="card bg-none">
+                            <div class="card-body align-self-center height-440">
+                                <div id="expenseByCategory"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="">
+                            <h4 class="h4 font-weight-400 float-left">Latest Income</h4>
+                            <a href="revenue" class="more-text history-text float-right">View All</a>
+                        </div>
+                        <div class="card bg-none dashboard-box-1">
+                            <div class="table-responsive">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Customer</th>
+                                            <th>Amount Due</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list">
+                                        <tr>
+                                            <td>Jul 8, 2020</td>
+                                            <td>Keir</td>
+                                            <td>$1,000.00</td>
+                                            <td>sd</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jul 8, 2020</td>
+                                            <td>Keir</td>
+                                            <td>$1,000.00</td>
+                                            <td>sdsdd</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jul 8, 2020</td>
+                                            <td>Protiong</td>
+                                            <td>$1,000.00</td>
+                                            <td>Demo Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jul 8, 2020</td>
+                                            <td>Protiong</td>
+                                            <td>$1,000.00</td>
+                                            <td>Demo Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jul 8, 2020</td>
+                                            <td>Ida F. Mullen</td>
+                                            <td>$560.00</td>
+                                            <td>Demo data</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="">
+                            <h4 class="h4 font-weight-400 float-left">Latest Expense</h4>
+                            <a href="payment" class="more-text history-text float-right">View All</a>
+                        </div>
+                        <div class="card bg-none dashboard-box-1">
+                            <div class="table-responsive">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Customer</th>
+                                            <th>Amount Due</th>
+                                            <th>Description</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list">
+                                        <tr>
+                                            <td>Jul 9, 2020</td>
+                                            <td></td>
+                                            <td>$1,000.00</td>
+                                            <td>Demo Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jul 9, 2020</td>
+                                            <td></td>
+                                            <td>$2,000.00</td>
+                                            <td>Demo Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jul 9, 2020</td>
+                                            <td></td>
+                                            <td>$3,000.00</td>
+                                            <td>Demo Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jul 8, 2020</td>
+                                            <td></td>
+                                            <td>$2,000.00</td>
+                                            <td>Demo Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jul 8, 2020</td>
+                                            <td></td>
+                                            <td>$1,000.00</td>
+                                            <td>Demo Data</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="">
+                            <h4 class="h4 font-weight-400 float-left">Invoices</h4>
+                        </div>
+                        <div class="card bg-none invo-tab dashboard-box-2">
+                            <ul class="nav nav-tabs">
+                                <li>
+                                    <a data-toggle="tab" href="#weekly_statistics" class="active">Weekly Statistics</a>
+                                </li>
+                                <li class="annual-billing">
+                                    <a data-toggle="tab" href="#monthly_statistics" class="">Monthly Statistics</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="weekly_statistics" class="tab-pane in active">
+                                    <div class="table-responsive">
+                                        <table class="table align-items-center mb-0">
+                                            <tbody class="list">
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Invoice Generated</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="green-text">$1,531.80</h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Paid</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="red-text">$109.90</h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Due</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="green-text">$1,421.90</h3>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="monthly_statistics" class="tab-pane">
+                                    <div class="table-responsive">
+                                        <table class="table align-items-center mb-0 ">
+                                            <tbody class="list">
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Invoice Generated</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="green-text">$1,531.80</h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Paid</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="red-text">$109.90</h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Due</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="green-text">$1,421.90</h3>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-9 col-lg-8 col-md-6">
+                        <div class="">
+                            <h4 class="h4 font-weight-400 float-left">Recent Invoices</h4>
+                        </div>
+                        <div class="card bg-none dashboard-box-2">
+                            <div class="table-responsive">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Customer</th>
+                                            <th>Issue Date</th>
+                                            <th>Due Date</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list">
+                                        <tr>
+                                            <td>#INVO00012</td>
+                                            <td>Keir </td>
+                                            <td>Feb 22, 2021</td>
+                                            <td>Feb 22, 2021</td>
+                                            <td>$99.90</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-success">Paid</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#INVO00011</td>
+                                            <td>Keir </td>
+                                            <td>Feb 22, 2021</td>
+                                            <td>Feb 22, 2021</td>
+                                            <td>$99.90</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-info">Partialy Paid</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#INVO00010</td>
+                                            <td>Keir </td>
+                                            <td>Feb 22, 2021</td>
+                                            <td>Feb 22, 2021</td>
+                                            <td>$1,332.00</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-primary">Draft</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#INVO00009</td>
+                                            <td>Protiong </td>
+                                            <td>Jul 17, 2020</td>
+                                            <td>Jul 17, 2020</td>
+                                            <td>$532.80</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-info">Partialy Paid</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#INVO00008</td>
+                                            <td>Keir </td>
+                                            <td>Jul 13, 2020</td>
+                                            <td>Jul 13, 2020</td>
+                                            <td>$0.00</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-success">Paid</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-9 col-lg-8 col-md-6">
+                        <div class="">
+                            <h4 class="h4 font-weight-400 float-left">Recent Bills</h4>
+                        </div>
+                        <div class="card bg-none dashboard-box-2">
+                            <div class="table-responsive">
+                                <table class="table align-items-center mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Vendor</th>
+                                            <th>Bill Date</th>
+                                            <th>Due Date</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="list">
+                                        <tr>
+                                            <td>#BILL00006</td>
+                                            <td>Adrienne J Reed </td>
+                                            <td>Jul 17, 2020</td>
+                                            <td>Jul 17, 2020</td>
+                                            <td>$532.80</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-primary">Draft</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#BILL00005</td>
+                                            <td>Anthony B Renfroe </td>
+                                            <td>Jul 8, 2020</td>
+                                            <td>Aug 12, 2020</td>
+                                            <td>$5,550.00</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-warning">Sent</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#BILL00004</td>
+                                            <td>Anthony B Renfroe </td>
+                                            <td>Jul 8, 2020</td>
+                                            <td>Aug 13, 2020</td>
+                                            <td>$427.40</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-info">Partialy Paid</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#BILL00003</td>
+                                            <td>Adrienne J Reed </td>
+                                            <td>Jul 8, 2020</td>
+                                            <td>Aug 7, 2020</td>
+                                            <td>$255.30</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-info">Partialy Paid</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#BILL00002</td>
+                                            <td>Kim J Gibson </td>
+                                            <td>Jul 8, 2020</td>
+                                            <td>Jul 30, 2020</td>
+                                            <td>$2,967.00</td>
+                                            <td>
+                                                <span class="badge badge-pill badge-success">Paid</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="">
+                            <h4 class="h4 font-weight-400 float-left">Bills</h4>
+                        </div>
+                        <div class="card bg-none invo-tab dashboard-box-2">
+                            <ul class="nav nav-tabs">
+                                <li>
+                                    <a data-toggle="tab" href="#bill_weekly_statistics" class="active">Weekly
+                                        Statistics</a>
+                                </li>
+                                <li class="annual-billing">
+                                    <a data-toggle="tab" href="#bill_monthly_statistics" class="">Monthly Statistics</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="bill_weekly_statistics" class="tab-pane in active">
+                                    <div class="table-responsive">
+                                        <table class="table align-items-center mb-0">
+                                            <tbody class="list">
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Bill Generated</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="green-text">$0.00</h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Paid</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="red-text">$0.00</h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Due</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="green-text">$0.00</h3>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div id="bill_monthly_statistics" class="tab-pane">
+                                    <div class="table-responsive">
+                                        <table class="table align-items-center mb-0">
+                                            <tbody class="list">
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Bill Generated</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="green-text">$0.00</h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Paid</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="red-text">$0.00</h3>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <h4 class="mb-0">Total</h4>
+                                                        <h5 class="mb-0">Due</h5>
+                                                    </td>
+                                                    <td>
+                                                        <h3 class="green-text">$0.00</h3>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div>
+                            <h4 class="h4 font-weight-400 float-left">Goal</h4>
+                            <div class="card pb-0 mb-4">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Name</h5>
+                                            <h5 class="report-text mb-0">Invoice Goal</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Type</h5>
+                                            <h5 class="report-text mb-0">Invoice</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Duration</h5>
+                                            <h5 class="report-text mb-0">2020-07 To 2020-08</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Target</h5>
+                                            <h5 class="report-text mb-0">$18,495.80 of $5,000.00</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Progress</h5>
+                                            <h5 class="report-text mb-0">369.92%</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 px-4">
+                                        <div class="progress-wrapper pt-0">
+                                            <div class="progress progress-xs mb-0 w-100">
+                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                    aria-valuenow="369.92" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: 369.92%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card pb-0 mb-4">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Name</h5>
+                                            <h5 class="report-text mb-0">Bill Goal</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Type</h5>
+                                            <h5 class="report-text mb-0">Bill</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Duration</h5>
+                                            <h5 class="report-text mb-0">2020-07 To 2020-09</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Target</h5>
+                                            <h5 class="report-text mb-0">$9,921.20 of $3,000.00</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Progress</h5>
+                                            <h5 class="report-text mb-0">330.71%</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 px-4">
+                                        <div class="progress-wrapper pt-0">
+                                            <div class="progress progress-xs mb-0 w-100">
+                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                    aria-valuenow="330.71" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: 330.71%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card pb-0 mb-4">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Name</h5>
+                                            <h5 class="report-text mb-0">Revenu Goal</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Type</h5>
+                                            <h5 class="report-text mb-0">Revenue</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Duration</h5>
+                                            <h5 class="report-text mb-0">2020-07 To 2020-09</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Target</h5>
+                                            <h5 class="report-text mb-0">$8,560.00 of $3,000.00</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Progress</h5>
+                                            <h5 class="report-text mb-0">285.33%</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 px-4">
+                                        <div class="progress-wrapper pt-0">
+                                            <div class="progress progress-xs mb-0 w-100">
+                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                    aria-valuenow="285.33" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: 285.33%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card pb-0 mb-4">
+                                <div class="row">
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Name</h5>
+                                            <h5 class="report-text mb-0">Payment Goal</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Type</h5>
+                                            <h5 class="report-text mb-0">Payment</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Duration</h5>
+                                            <h5 class="report-text mb-0">2020-07 To 2020-08</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Target</h5>
+                                            <h5 class="report-text mb-0">$9,000.00 of $5,000.00</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 col-sm-6">
+                                        <div class="p-4">
+                                            <h5 class="report-text gray-text mb-0">Progress</h5>
+                                            <h5 class="report-text mb-0">180.00%</h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 px-4">
+                                        <div class="progress-wrapper pt-0">
+                                            <div class="progress progress-xs mb-0 w-100">
+                                                <div class="progress-bar bg-warning" role="progressbar"
+                                                    aria-valuenow="180.00" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: 180.00%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="commonModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div>
+                    <h4 class="h4 font-weight-400 float-left modal-title" id="exampleModalLabel"></h4>
+                    <a href="#" class="more-text widget-text float-right close-icon" data-dismiss="modal"
+                        aria-label="Close">Close</a>
+                </div>
+                <div class="modal-body">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/site.core.js"></script>
+
+    <script src="assets/libs/progressbar.js/dist/progressbar.min.js"></script>
+    <script src="assets/libs/moment/min/moment.min.js"></script>
+    <script src="assets/libs/bootstrap-notify/bootstrap-notify.min.js"></script>
+    <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script src="assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+    <script src="assets/libs/nicescroll/jquery.nicescroll.min.js "></script>
+    <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+    <script>moment.locale('en');</script>
+
+    <script>
+        var dataTabelLang = {
+            paginate: { previous: "Previous", next: "Next" },
+            lengthMenu: "Show _MENU_ entries",
+            zeroRecords: "No data available in table",
+            info: "Showing _START_ to _END_ of _TOTAL_ entries",
+            infoEmpty: " ",
+            search: "Search:"
+        }
+    </script>
+
+    <script src="assets/js/site.js"></script>
+    <script src="assets/js/datatables.min.js"></script>
+
+    <script src="assets/js/jscolor.js "></script>
+    <script src="assets/js/custom.js "></script>
+    <script>
+        var date_picker_locale = {
+            format: 'YYYY-MM-DD',
+            daysOfWeek: [
+                "Sun",
+                "Mon",
+                "Tue",
+                "Wed",
+                "Thu",
+                "Fri",
+                "Sat"
+            ],
+            monthNames: [
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December"
+            ],
+        };
+        var calender_header = {
+            today: "today",
+            month: 'month',
+            week: 'week',
+            day: 'day',
+            list: 'list'
+        };
+    </script>
+
+    <script>
+        var options = {
+            series: [
+                {
+                    name: "Income",
+                    data: [5000, 4000, 5000, 4000, 6000, 8000, 10000, 6000, 11000, 12000, 9000, 8000, 9000, 14000, 10000]
+                },
+                {
+                    name: "Expense",
+                    data: [4000, 3000, 4000, 3000, 5000, 7000, 9000, 5000, 12000, 10000, 9000, 7000, 8000, 12000, 9000]
+                }
+            ],
+            chart: {
+                height: 350,
+                type: 'line',
+                dropShadow: {
+                    enabled: true,
+                    color: '#000',
+                    top: 18,
+                    left: 7,
+                    blur: 10,
+                    opacity: 0.2
+                },
+                toolbar: {
+                    show: false
+                }
+            },
+            colors: ['#77B6EA', '#545454'],
+            dataLabels: {
+                enabled: true,
+            },
+            stroke: {
+                curve: 'smooth'
+            },
+            title: {
+                text: '',
+                align: 'left'
+            },
+            grid: {
+                borderColor: '#e7e7e7',
+                row: {
+                    colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                    opacity: 0.5
+                },
+            },
+            markers: {
+                size: 1
+            },
+            xaxis: {
+                categories: ["14-May", "13-May", "12-May", "11-May", "10-May", "09-May", "08-May", "07-May", "06-May", "05-May", "04-May", "03-May", "02-May", "01-May", "30-Apr"],
+                title: {
+                    text: 'Days'
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'Amount'
+                },
+
+            },
+            legend: {
+                position: 'top',
+                horizontalAlign: 'right',
+                floating: true,
+                offsetY: -25,
+                offsetX: -5
+            }
+        };
+        var chart = new ApexCharts(document.querySelector("#cash-flow"), options);
+        chart.render();
+
+
+        var SalesChart = {
+            series: [
+                {
+                    name: "Income",
+                    data: [9000, 34230, 21100, 12530, 33360, 28000, 30000, 15000, 17000, 8000, 23000, 29000]
+                },
+                {
+                    name: "Expense",
+                    data: [6000, 30230, 19100, 10530, 30360, 22000, 25000, 12000, 12000, 5000, 17000, 23000]
+                }
+            ],
+            colors: ['#77B6EA', '#545454'],
+            chart: {
+                type: 'bar',
+                height: 430
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: false,
+                    dataLabels: {
+                        position: 'top',
+                    },
+                }
+            },
+            dataLabels: {
+                enabled: true,
+                offsetX: -6,
+                style: {
+                    fontSize: '12px',
+                    colors: ['#fff']
+                }
+            },
+            stroke: {
+                show: true,
+                width: 1,
+                colors: ['#fff']
+            },
+            xaxis: {
+                categories: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+            },
+        };
+        var sales = new ApexCharts(document.querySelector("#incExpBarChart"), SalesChart);
+        sales.render();
+
+
+        var incomeCategories = {
+            // series: [10,20],
+            series: [10, 20],
+
+            chart: {
+                width: '500px',
+                type: 'pie',
+            },
+            colors: ["#00B8D9", "#36B37E"],
+            labels: ["Maintenance Sales", "Product Sales"],
+
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        offset: -5
+                    }
+                }
+            },
+            title: {
+                text: ""
+            },
+            dataLabels: {},
+            legend: {
+                display: false
+            },
+
+        };
+        var incomeCategory = new ApexCharts(document.querySelector("#incomeByCategory"), incomeCategories);
+        incomeCategory.render();
+
+
+        var expenseCategories = {
+            series: [10, 20],
+
+            chart: {
+                width: '500px',
+                height: '500px',
+                type: 'pie',
+            },
+            colors: ['#77B6EA', '#545454'],
+            labels: ["Rent Or Lease", "Travel"],
+
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        offset: -5
+                    }
+                }
+            },
+            title: {
+                text: ""
+            },
+            dataLabels: {},
+            legend: {
+                show: true
+            }
+        };
+        var expenseCategory = new ApexCharts(document.querySelector("#expenseByCategory"), expenseCategories);
+        expenseCategory.render();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Medico Admin</title>
+        <link rel="icon" href="images/favicon.png" type="image" sizes="16x16">
+        <link rel="stylesheet" href="css/animate-css/animate.min.css">
+    <link rel="stylesheet" href="bootstrap-timepicker/css/bootstrap-timepicker.css">
+
+    <link rel="stylesheet" href="js/bootstrap-daterangepicker/daterangepicker.css">
+
+    <link rel="stylesheet" href="css/select2/select2.min.css">
+
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/ac.css">
+
+    <link rel="stylesheet" href="css/datatables.min.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    </head>
+    <body>
+        <div class="modal-dialog modal-dialog-centered modal-undefined" role="document">
+            <div class="modal-content"  style="border: none;">
+                <div>
+                    <h4 class="h4 font-weight-400 float-left modal-title" id="exampleModalLabel">&nbsp;&nbsp;Create New customer</h4>
+                    <a href="customer.html" class="more-text widget-text float-right close-icon" data-dismiss="modal" aria-label="Close" style="text-decoration-line: none;margin-top: 10px;margin-right:10px;">Close</a>
+                </div>
+                
+        <div class="modal-body">
+            <div class="card bg-none card-box">
+                <form method="POST" action=" " accept-charset="UTF-8"><input name="_token" type="hidden" value=" ">
+                    <h5 class="sub-title">Basic Info</h5>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="name" class="form-control-label">Name</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-address-card"></i></span>
+                                    <input class="form-control" required="required" name="name" type="text" id="name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="contact" class="form-control-label">Contact</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-mobile-alt"></i></span>
+                                    <input class="form-control" required="required" name="contact" type="text" id="contact">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="email" class="form-control-label">Email</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-envelope"></i></span>
+                                    <input class="form-control" name="email" type="text" id="email">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="password" class="form-control-label">Password</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-key"></i></span>
+                                    <input class="form-control" required="required" minlength="6" name="password" type="password" value="" id="password">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="tab-pane fade show" id="tab-2" role="tabpanel">
+                                <div class="form-group">
+                                    <label for="customField-2" class="form-control-label">Custome Filed 1</label>
+                                    <div class="input-group">
+                                        <input class="form-control" name="customField[2]" type="text">
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <h5 class="sub-title">Billing Address</h5>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="billing_name" class="form-control-label">Name</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-address-card"></i></span>
+                                    <input class="form-control" name="billing_name" type="text" id="billing_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="billing_country" class="form-control-label">Country</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-flag"></i></span>
+                                    <input class="form-control" name="billing_country" type="text" id="billing_country">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="billing_state" class="form-control-label">State</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-chess-pawn"></i></span>
+                                    <input class="form-control" name="billing_state" type="text" id="billing_state">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="billing_city" class="form-control-label">City</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-city"></i></span>
+                                    <input class="form-control" name="billing_city" type="text" id="billing_city">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="billing_phone" class="form-control-label">Phone</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-mobile-alt"></i></span>
+                                    <input class="form-control" name="billing_phone" type="text" id="billing_phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="billing_zip" class="form-control-label">Zip Code</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-crosshairs"></i></span>
+                                    <input class="form-control" name="billing_zip" type="text" id="billing_zip">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="billing_address" class="form-control-label">Address</label>
+                                <div class="input-group">
+                                    <textarea class="form-control" rows="3" name="billing_address" cols="50" id="billing_address"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 text-right">
+                        <input type="button" id="billing_data" value="Shipping Same As Billing" class="btn-create badge-blue">
+                    </div>
+                    <h4 class="sub-title">Shipping Address</h4>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="shipping_name" class="form-control-label">Name</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-address-card"></i></span>
+                                    <input class="form-control" name="shipping_name" type="text" id="shipping_name">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="shipping_country" class="form-control-label">Country</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-flag"></i></span>
+                                    <input class="form-control" name="shipping_country" type="text" id="shipping_country">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="shipping_state" class="form-control-label">State</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-chess-pawn"></i></span>
+                                    <input class="form-control" name="shipping_state" type="text" id="shipping_state">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="shipping_city" class="form-control-label">City</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-city"></i></span>
+                                    <input class="form-control" name="shipping_city" type="text" id="shipping_city">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="shipping_phone" class="form-control-label">Phone</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-mobile-alt"></i></span>
+                                    <input class="form-control" name="shipping_phone" type="text" id="shipping_phone">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6">
+                            <div class="form-group">
+                                <label for="shipping_zip" class="form-control-label">Zip Code</label>
+                                <div class="form-icon-user">
+                                    <span><i class="fas fa-crosshairs"></i></span>
+                                    <input class="form-control" name="shipping_zip" type="text" id="shipping_zip">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="shipping_address" class="form-control-label">Address</label>
+                                <label class="form-control-label" for="example2cols1Input"></label>
+                                <div class="input-group">
+                                    <textarea class="form-control" rows="3" name="shipping_address" cols="50" id="shipping_address"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 px-0">
+                        <input type="submit" value="Create" class="btn-create badge-blue">
+                        <input type="button" value="Cancel" class="btn-create bg-gray" data-dismiss="modal">
+                    </div>
+
+                </form>
+            </div>
+</div>
+</div>
+</div>
+        </div>
+
+        <script src="assets/js/site.core.js"></script>
+
+        <script src="assets/libs/progressbar.js/dist/progressbar.min.js"></script>
+        <script src="assets/libs/moment/min/moment.min.js"></script>
+        <script src="assets/libs/bootstrap-notify/bootstrap-notify.min.js"></script>
+        <script src="assets/libs/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+        <script src="assets/libs/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script src="assets/libs/select2/dist/js/select2.min.js"></script>
+        <script src="assets/libs/nicescroll/jquery.nicescroll.min.js "></script>
+        <script src="assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+        <script>moment.locale('en');</script>
+
+        <script>
+            var dataTabelLang = {
+                paginate: {previous: "Previous", next: "Next"},
+                lengthMenu: "Show _MENU_ entries",
+                zeroRecords: "No data available in table",
+                info: "Showing _START_ to _END_ of _TOTAL_ entries",
+                infoEmpty: " ",
+                search: "Search:"
+            }
+        </script>
+
+        <script src="assets/js/site.js"></script>
+        <script src="assets/js/datatables.min.js"></script>
+
+        <script src="assets/js/jscolor.js "></script>
+        <script src="assets/js/custom.js "></script>
+        <script>
+            var date_picker_locale = {
+                format: 'YYYY-MM-DD',
+                daysOfWeek: [
+                    "Sun",
+                    "Mon",
+                    "Tue",
+                    "Wed",
+                    "Thu",
+                    "Fri",
+                    "Sat"
+                ],
+                monthNames: [
+                    "January",
+                    "February",
+                    "March",
+                    "April",
+                    "May",
+                    "June",
+                    "July",
+                    "August",
+                    "September",
+                    "October",
+                    "November",
+                    "December"
+                ],
+            };
+            var calender_header = {
+                today: "today",
+                month: 'month',
+                week: 'week',
+                day: 'day',
+                list: 'list'
+            };
+        </script>
+    </body>
+</html>
